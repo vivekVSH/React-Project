@@ -1,0 +1,147 @@
+/* ---------- Global Reset ---------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+.parent {
+  min-height: 100vh;
+  background-color: rgb(45, 43, 43);
+  display: flex;
+  padding: 30px;
+  gap: 30px;
+  justify-content: 10px;
+  flex-wrap: wrap;
+}
+
+
+
+.Card {
+  width: 360px;
+  height: 310px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.Card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+
+/* ---------- Top Section ---------- */
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.top button {
+  background: #f1f1f1;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.top button:hover {
+  background: #dcdcdc;
+}
+
+/* ---------- Center Section ---------- */
+
+.center {
+  margin-top: 18px;
+}
+
+.center h3 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  color: #4b4b4b;
+}
+
+.center h3 span {
+  font-size: 12px;
+  color: #9c9c9c;
+}
+
+.center h2 {
+  margin: 6px 0;
+  font-size: 21px;
+  font-weight: 600;
+  color: #1c1c1c;
+}
+
+.center div {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.center div h4 {
+  background: #e9efff;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #3a57e8;
+  font-weight: 500;
+}
+
+/* ---------- Bottom Section ---------- */
+
+.bottom {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom div h3 {
+  font-size: 18px;
+  color: #242424;
+}
+
+.bottom div p {
+  font-size: 13px;
+  color: #6e6e6e;
+  margin-top: 2px;
+}
+
+.bottom button {
+  background: #3a57e8;
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.bottom button:hover {
+  background: #2c46c4;
+}
