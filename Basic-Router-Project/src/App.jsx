@@ -1,34 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import {Routes , Route} from 'react-router-dom'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Product from './pages/Product'
+import NotFound from './pages/NotFound'
+import Men from './pages/Men'
+import Women from './pages/Women'
+import Kids from './pages/Kids'
+import Couses from './pages/Couses'
+import CourseDetails from './pages/CourseDetails'
+import Navredirect from './components/Navredirect'
 
-function App() {
-  const [count, setCount] = useState(0)
 
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className='bg-black h-screen text-white'>
+      <Navbar/>
+      <Navredirect/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/about' element={<About/>} />
+        <Route path='/product' element={<Product/>}>
+          <Route path='men' element={<Men/>}/>
+          <Route path='women' element={<Women/>}/>
+          <Route path='kids' element={<Kids/>}/>
+        </Route>
+        <Route path='/course' element={<Couses/>}/>
+        <Route path='/course/:id' element={<CourseDetails/>}/>
+        <Route path='/contact' element={<Contact/>}/>
+        <Route path='*'  element={<NotFound/>}/>
+      </Routes>
+      <Footer/>
+    </div>
   )
 }
 
